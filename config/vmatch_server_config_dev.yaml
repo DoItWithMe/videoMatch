@@ -1,0 +1,23 @@
+log_cfg:
+  name: vmatch
+  level: DEBUG
+  path: ./logs/all_logs.log
+  # error_path: ./logs/error.log
+  enable_stdout: true
+  enable_rotate: false
+  rotate_bytes: 524288000
+  max_files: 3
+
+milvus_embedding_cfg:
+  host: "milvus_host"
+  port: 19530
+  db_name: "vmatch_db"
+  collection_name: "video_embeddings"
+  index_name: "ivf_pq_index"
+
+milvus_media_info_cfg:
+  host: "milvus_host"
+  port: 19530
+  db_name: "vmatch_db"
+  collection_name: "video_media_info"
+
